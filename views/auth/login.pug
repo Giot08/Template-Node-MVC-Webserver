@@ -1,0 +1,20 @@
+extends ../layout/index
+
+block content 
+    div(class="py-10")
+        h1(class="text-4xl my-10 font-extrabold text-center") MVC
+            span(class="ml-4 font-normal") Webserver 
+        p(class="font-bold text-center text-xl")=page 
+        div(class="mt-8 mx-auto max-w-md")
+            div(class="bg-white py-8 px-4 shadow")
+                form(action="" class="space-y-5") 
+                    div() 
+                        label(for="email" class="block text-sm uppercase text-gray-500 mb-2 font-bold") Your email
+                        input(id="email" type="email" class="w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400" placeholder="Your email")
+                    div() 
+                        label(for="password" class="block text-sm uppercase text-gray-500 mb-2 font-bold") password
+                        input(id="pasword" type="password" class="w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400" placeholder="Password")
+                    input(type="submit", value="Login" class="w-full bg-indigo-700 text-white hover:bg-indigo-950 cursor-pointer py-3 rounded-md")
+                    div(class="flex items-center justify-between")
+                        a(href="/auth/register" class="text-blue-500 text-sm") Register
+                        a(href="/auth/reset_password" class="text-blue-500 text-sm") Forgot password?
